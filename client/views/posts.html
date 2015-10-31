@@ -1,0 +1,19 @@
+<template name="posts">
+    <h3>Posts</h3>
+    {{#if isCreatingPost}}  {{!--note the  'isCreatingPost' helper. Look in posts.js --}}
+        <form class="create-post">  {{!--this will show while you are creating a post--}}
+            <input name="name" type="text">
+            <button type="submit">Submit</button>
+            <a class="cancel" href="#">Cancel</a>
+        </form>
+        {{else}}   {{!--this will show when isCreatingPosts return false...which is NEVER at this point--}}
+    <a class="create" href="#">Create</a>
+    {{/if}}
+
+    <ul>
+        {{#each posts}}
+            {{> post}}
+{{!--            <li>{{name}} <a class="remove" href="#">(x)</a></li> --}}
+            {{/each}}
+    </ul>
+</template>

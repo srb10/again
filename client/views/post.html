@@ -1,0 +1,17 @@
+<!--This file only deals with the singular- removing or editing a single team-->
+<template name="post">
+    {{!--  <li>{{name}} <a class="remove" href="#">(x)</a> </li> --}}
+    <li>
+        {{#if isEditingPost}}
+            <form class="form-edit">
+                <input name="name" type="text" value="{{name}}">
+                <button type="submit">Submit</button>
+                <a class="cancel" href="#">Cancel</a>
+            </form>
+        {{else}}
+            {{name}}
+            <a href="#" class="edit">edit</a>
+            <a href="#" class="remove"> (x)</a>
+        {{/if}}
+    </li>
+</template>
