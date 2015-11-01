@@ -1,4 +1,4 @@
-<template name="posts">
+<template name="createPosts">
     <h3>Posts</h3>
     {{#if currentUser}}  {{!--If not logged in, you cannot create--}}
     {{#if isCreatingPost}}  {{!--note the  'isCreatingPost' helper. Look in posts.js --}}
@@ -11,7 +11,8 @@
     <a class="create" href="#">Create</a>
     {{/if}}
     {{/if}}
-
+</template>
+<template name="posts">
     <ul>
         {{#each posts}}
             {{> post}}

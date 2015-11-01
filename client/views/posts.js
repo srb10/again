@@ -1,17 +1,21 @@
 ///////////HELPERS///HELPERS///HELPERS///HELPERS///HELPERS///HELPERS///HELPERS//
 Template.posts.helpers({
-    isCreatingPost: function() {  //Note: the name of the helper is 'isCreating Team
-        //return true;  //commented out before installing the next line of code
-        return Session.get('isCreatingPost');
-    },
+
     posts: function () {  //automatically reactive because it is formed in the template object
         return Posts.find();
     }
 });
 
+Template.createPosts.helpers({isCreatingPost: function() {  //Note: the name of the helper is 'isCreating Team
+    //return true;  //commented out before installing the next line of code
+    return Session.get('isCreatingPost');
+}
+
+});
+
 //////////////////////////////////////////////////////////////////////////////////////////////
 ///////////EVENTS///EVENTS///EVENTS///EVENTS///EVENTS///EVENTS///EVENTS///EVENTS///EVENTS///////////////EVENTS
-Template.posts.events({
+Template.createPosts.events({
     'click a.create': function(e, tpl){
         e.preventDefault();
         Session.set('isCreatingPost', true);
