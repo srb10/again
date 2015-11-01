@@ -9,7 +9,7 @@ Posts.allow({
         return (userId === userId);
     },
     update: function(userId){
-    return(userId ===userId);
+    return (userId === userId);
 },
     remove:function(userId){
         return(userId===userId);
