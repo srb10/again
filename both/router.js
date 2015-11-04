@@ -4,4 +4,9 @@ Router.route('/', function(){
     }
 );
 
+Router.route('route2', function(){
+    //this.render('adminView')
+    this.render(Meteor.user() ? 'adminView':'main')
+});
+
 

@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="meteor-packages-auto-import-browser" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/dburles_mongo-collection-instances/0.3.4/web.browser/packages/dburles_mongo-collection-instances.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/npm-bcrypt/0.7.8_2/web.browser/packages/npm-bcrypt.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/lai_collection-extensions/0.1.4/web.browser/packages/lai_collection-extensions.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/dburles_mongo-collection-instances/0.3.4/web.browser/packages/dburles_mongo-collection-instances.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/npm-bcrypt/0.7.8_2/web.browser/packages/npm-bcrypt.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/lai_collection-extensions/0.1.4/web.browser/packages/lai_collection-extensions.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
