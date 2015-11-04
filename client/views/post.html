@@ -3,15 +3,20 @@
     {{!--  <li>{{name}} <a class="remove" href="#">(x)</a> </li> --}}
     <li>
         {{#if isEditingPost}}
-            <form class="form-edit">
+                <form class="form-edit">
                 <input name="name" type="text" value="{{name}}">
                 <button type="submit">Submit</button>
                 <a class="cancel" href="#">Cancel</a>
             </form>
-        {{else}}
+
+
+{{else}}
             {{name}}
+            {{#if currentUser}}  {{!--This is where the login pays off. No login, no chance to edit or delete.--}}
             <a href="#" class="edit">edit</a>
+
             <a href="#" class="remove"> (x)</a>
+      {{/if}}
         {{/if}}
     </li>
 </template>

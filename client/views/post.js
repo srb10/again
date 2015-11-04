@@ -2,8 +2,13 @@
 Template.post.helpers({
     isEditingPost: function() {
         ///  if (console.log(this.toString())) {
-        return Session.get('editedPostId') === this._id;  //this looks like an error?
-    }
+/*        console.log(Meteor.userID);
+        if (Meteor.userId>1){
+            return false;}
+        else{*/
+            return Session.get('editedPostId') === this._id;  //this looks like an error?
+        }
+   // }
 });
 
 Template.post.events({
