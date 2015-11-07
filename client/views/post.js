@@ -6,6 +6,8 @@ Template.post.helpers({
         if (Meteor.userId>1){
             return false;}
         else{*/
+        //This code was frm the turorial...I thought...need to check it and see.
+        //I rememberthinking it looked like an error when I typed it --SRB
             return Session.get('editedPostId') === this._id;  //this looks like an error?
         }
    // }
