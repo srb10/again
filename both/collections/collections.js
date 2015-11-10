@@ -1,6 +1,5 @@
 Posts = new Mongo.Collection('posts');
 
-
 ///// ***None of the following code is thought out or correct.
 ////TODO: rewrite this code so it makes sense.
 Posts.allow({
