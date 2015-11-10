@@ -1,4 +1,4 @@
-//this is code for singular - only edit or remove a single team
+//this is code for a singular post- only edit or remove a single post
 Template.post.helpers({
     isEditingPost: function() {
         ///  if (console.log(this.toString())) {
@@ -6,13 +6,14 @@ Template.post.helpers({
         if (Meteor.userId>1){
             return false;}
         else{*/
-        //This code was frm the turorial...I thought...need to check it and see.
+        //This code was from the tutorial...I thought...need to check it and see.
         //I rememberthinking it looked like an error when I typed it --SRB
             return Session.get('editedPostId') === this._id;  //this looks like an error?
         }
    // }
 });
 
+//The click events:
 Template.post.events({
     'click a.edit': function(e, tpl){
         e.preventDefault();

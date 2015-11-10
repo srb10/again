@@ -3,17 +3,19 @@
     {{#if currentUser}}  {{!--If not logged in, you cannot create--}}
     {{#if isCreatingPost}}  {{!--note the  'isCreatingPost' helper. Look in posts.js --}}
         <form class="create-post">  {{!--this will show while you are creating a post--}}
-           <label for="inputPost">  {{!--ADDED SRB 11/5/2015--}}
+           <label for="create-post">createPosts Template</label>  {{!--ADDED SRB 11/5/2015--}}
             <input name="name" type="text">
             <button type="submit">Submit</button>
             <a class="cancel" href="#">Cancel</a>
-           </label>
+
         </form>
         {{else}}   {{!--this will show when isCreatingPosts return false...which is NEVER at this point--}}
     <a class="create" href="#">Create</a>
     {{/if}}
     {{/if}}
 </template>
+
+
 <template name="posts">
     <ul>
         {{#each posts}}
@@ -23,3 +25,4 @@
     </ul>
 
 </template>
+
