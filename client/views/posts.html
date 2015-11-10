@@ -2,7 +2,7 @@
     <h3>Posts - Admin View</h3>
     {{#if currentUser}}  {{!--If not logged in, you cannot create--}}
     {{#if isCreatingPost}}  {{!--note the  'isCreatingPost' helper. Look in posts.js --}}
-        <form class="create-post">  {{!--this will show while you are creating a post--}}
+        <form class="create-post" id="clearable">  {{!--this will show while you are creating a post--}}
            <label for="create-post">createPosts Template</label>  {{!--ADDED SRB 11/5/2015--}}
             <input name="name" type="text">
             <button type="submit">Submit</button>

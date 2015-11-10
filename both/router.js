@@ -5,8 +5,15 @@ Router.route('/', function(){
 );
 
 Router.route('route2', function(){
+
+    if (!Meteor.user()){
+        this.render('main');
+    } else {
+        this.render(Meteor.user() ? 'adminView' : 'main')
+
     //this.render('adminView')
-    this.render(Meteor.user() ? 'adminView':'main')
+  //  this.render(Meteor.user() ? 'adminView':'main')
+}
 });
 
 /*

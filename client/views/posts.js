@@ -18,7 +18,7 @@ Template.createPosts.helpers({isCreatingPost: function() {  //Note: the name of 
 
 
 //Notes: isCreatingPost is a bit mysterious: It gives the application some state, and is a Boolen Session variable.
-//there is also a Template .x.helpers ({ isCreatingPost that will simply get and return the value of that Boolean.
+//there is also a Template .x.helpers ({ isCreatingPost that will simply get and return the value
 
 Template.createPosts.events({
     'click a.create': function(e, tpl){
@@ -39,7 +39,16 @@ Template.createPosts.events({
                 Tracker.afterFlush(function() {  //TODO: this solves some problem that can plague developers and make them quitMeteor altogether.
                     tpl.$('input[name=name]').val(postName); //val() is a geter/setter method for HTML form elements, as well as checkboxes, radio adn <select> elements
                 });
-            }
+
+            } //trying this
+            else { //use jQuery to make the text box empty
+                //if form data is stored succesfully (it will be since it uses latency compensation, rght...unless it were to lose a connection right about that time...oh well.
+                document.getElementById("clearable").reset();
+                Session.set('isCreatingPost', false);
+
+
+            }//through here
+
         });
     }
 
