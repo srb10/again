@@ -15,6 +15,11 @@ Template.createPosts.helpers({isCreatingPost: function() {  //Note: the name of 
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 ///////////EVENTS///EVENTS///EVENTS///EVENTS///EVENTS///EVENTS///EVENTS///EVENTS///EVENTS///////////////EVENTS
+
+
+//Notes: isCreatingPost is a bit mysterious: It gives the application some state, and is a Boolen Session variable.
+//there is also a Template .x.helpers ({ isCreatingPost that will simply get and return the value of that Boolean.
+
 Template.createPosts.events({
     'click a.create': function(e, tpl){
         e.preventDefault();
